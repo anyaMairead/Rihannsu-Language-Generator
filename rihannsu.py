@@ -3,7 +3,7 @@
 
 # Rihannsu word patterns, as derived from the language in "My Enemy, My Ally"
 # and "The Romulan way (where v=vowel and c=consonant):
-# v, vc, cv, vcv, cvc, vcvc, cvcv, vcvcv, cvcvc, vcvcvc, cvcvcvc,
+# v, vc, cv, vcv, cvc, vcvc, cvcv, vcvcv, cvcvc, vcvcvc, cvcvcv, vcvcvcv, cvcvcvc
 
 from random import choice, randint, seed
 from string import capitalize
