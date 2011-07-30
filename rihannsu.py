@@ -99,6 +99,9 @@ def first_word():
         return choice(["H'", "D'", "W", "N'", "R'", "V", "Ll"]) + w
     else:
         return choice(["H'", "Ae", "D'", "U", "N'", "R'", "O"]) + w
+    #In the event that the initial letters list was only necessary because of the
+    #difficulty of capitalizing words in BASIC, this function and the initial_letters
+    #array can be deleted, and a capitalization clause added to the generate_sentence function
 
 def generate_sentence():
     """Generates a sentence in Rihannsu that contains between 4 and 8 words.
@@ -107,6 +110,9 @@ def generate_sentence():
     sentence_length = choice([4, 4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8])
     for i in range(1, sentence_length):
     	w = first_word() if i == 1 else word()
+    	#If a sentence can start with any word, delete the preceeding line and add:
+    	#if i==1:
+    	#    w = capitalize(w)
         if i == sentence_length - 1: #add ending punctuation
             w += choice([".", ".", ".", "....", ".", "?", "?", "!", "."])
         elif randint(0, 10) < 1: #add intra-sentence punctuation
