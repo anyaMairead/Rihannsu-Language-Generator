@@ -89,15 +89,24 @@ def word():
     elif i <= 78:
 	return c() + v() + c() + v() + c() + v() + c()
 
+def first_word():
+    """Special case when the word is the first one in the sentence: start word
+    with one of 10 specific morphemes"""
+    w = word()
+    #The following tests prevent the occurence of vowel-vowel and consonant-consonant
+    #combinations, which, from what I can tell, don't occur in the Rihannsu language.
+    if w[0] in ["a", "e", "i", "o", "u"]:
+        return choice(["H'", "D'", "W", "N'", "R'", "V", "Ll"]) + w
+    else:
+        return choice(["H'", "Ae", "D'", "U", "N'", "R'", "O"]) + w
+
 def generate_sentence():
     """Generates a sentence in Rihannsu that contains between 4 and 8 words.
     Sentence length can be changed by changing the numbers in the array
     sentence_length"""
     sentence_length = choice([4, 4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8])
     for i in range(1, sentence_length):
-        w = word()
-        if i == 1: #ensure proper capitalization
-            w = capitalize(w) 
+    	w = first_word() if i == 1 else word()
         if i == sentence_length - 1: #add ending punctuation
             w += choice([".", ".", ".", "....", ".", "?", "?", "!", "."])
         elif randint(0, 10) < 1: #add intra-sentence punctuation
