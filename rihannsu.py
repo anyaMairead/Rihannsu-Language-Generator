@@ -13,34 +13,34 @@ from string import capitalize
 #in during the execution of the generate_sentence function.
 initial_letters = ["H'", "Ae", "D'", "W","U", "N'", "R'", "O", "V", "Ll"]
     
-vowels = ["ae","A","i'","a","Eh","e","T'","I","u'","s"
-	  "ae","ea","ei","e","a","iu","o","ie","i"
-    	  "eo","i","ae","ie","ai","au","a","ei","ah"
-    	  "ao","a","aeu","u","ae","oa","i","s"
+vowels = ["ae","A","i'","a","Eh","e","T'","I","u'","s",
+	  "ae","ea","ei","e","a","iu","o","ie","i",
+    	  "eo","i","ae","ie","ai","au","a","ei","ah",
+    	  "ao","a","aeu","u","ae","oa","i","s",
     	  "i","ea","ia","E","ei","ta'","ra-","ei",
-    	  "'h","ae","oi","iy","u","ei","eh","s'h","i"
-    	  "e'","ia","ie","iy","ih","ae","io","ai","ui"
-    	  "ae","y","ei","ie","a'e","u","iu","ou","aa"
-    	  "a","i","ih","i'h","e","ea","aa","ae","u","aeih"
-    	  "ae","ei","iu","oa","ei","o","oi","ue"
-    	  "e","ii","a","ee","eu","i","o","iu","uu"
-    	  "uy","ae","e","i","'i","'u","'u","iae","eu","a"
-    	  "ae","hl","iu","-a","ss","-t","r-","nn","'nh","ai"
-    	  "iu","iu","hu","ha","la","se","mo","tha","kha","dha"
+    	  "'h","ae","oi","iy","u","ei","eh","s'h","i",
+    	  "e'","ia","ie","iy","ih","ae","io","ai","ui",
+    	  "ae","y","ei","ie","a'e","u","iu","ou","aa",
+    	  "a","i","ih","i'h","e","ea","aa","ae","u","aeih",
+    	  "ae","ei","iu","oa","ei","o","oi","ue",
+    	  "e","ii","a","ee","eu","i","o","iu","uu",
+    	  "uy","ae","e","i","'i","'u","'u","iae","eu","a",
+    	  "ae","hl","iu","-a","ss","-t","r-","nn","'nh","ai",
+    	  "iu","iu","hu","ha","la","se","mo","tha","kha","dha",
     	  "a","i","t","e","e","ae","ai","ia","ia","ou"]
 
 consonants = ["s","ll","R","m","k","t","h","r","rr",
-	      "v","mn","kh","d","hv","fv","r","t"
-	      "th","k","lh","d","bh","d'","dr","ht"
-	      "ll","lh","dt'","ht","th","kh","l'","nn","n"
-	      "'rh","rh","jh","kj","lh","nv","tr","hw","fv"
-	      "nn","hw","d","nv","mn","dh","rh","ll'","sw"
-	      "lmn","l","mn","h'n","t","ss","hv","hs","hr"
-	      "hj","hf","wh","rrh","bh","j","y"
-	      "llu","dh","kh","rh","wh","mn"
-	      "'ss","l'","k'h","hw","rr","r","rr'","mm","t'd","'hh"
-	      "qh","vh","fv","nh","d","e","hh","k","a","t"
-	      "dl","dl","rh","nnh","rai","th","dh-","yrh","aith","qh"
+	      "v","mn","kh","d","hv","fv","r","t",
+	      "th","k","lh","d","bh","d'","dr","ht",
+	      "ll","lh","dt'","ht","th","kh","l'","nn","n",
+	      "'rh","rh","jh","kj","lh","nv","tr","hw","fv",
+	      "nn","hw","d","nv","mn","dh","rh","ll'","sw",
+	      "lmn","l","mn","h'n","t","ss","hv","hs","hr",
+	      "hj","hf","wh","rrh","bh","j","y",
+	      "llu","dh","kh","rh","wh","mn",
+	      "'ss","l'","k'h","hw","rr","r","rr'","mm","t'd","'hh",
+	      "qh","vh","fv","nh","d","e","hh","k","a","t",
+	      "dl","dl","rh","nnh","rai","th","dh-","yrh","aith","qh",
               "m","t","r","q","s","f","v","h","z","y"]
 
 rihannsu_text = [] #create an empty array - will use to store text
